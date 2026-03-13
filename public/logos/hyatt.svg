@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="white">
+  <text x="0" y="30" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="normal" fill="white" letter-spacing="4">HYATT</text>
+  <circle cx="145" cy="18" r="12" fill="none" stroke="white" stroke-width="1.5"/>
+  <text x="145" y="23" font-family="Georgia, serif" font-size="14" fill="white" text-anchor="middle">H</text>
+</svg>
