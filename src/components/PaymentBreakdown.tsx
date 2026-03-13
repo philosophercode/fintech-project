@@ -10,6 +10,7 @@ import {
   MapPin,
   ShoppingBag,
   TrendingUp,
+  Info,
 } from "lucide-react";
 import { paymentBreakdown, paymentSummary } from "@/data/trip";
 import type { LucideIcon } from "lucide-react";
@@ -45,7 +46,7 @@ export function PaymentBreakdown() {
               return (
                 <tr
                   key={i}
-                  className="border-b border-border last:border-b-0 transition-colors hover:bg-surface-hover"
+                  className="border-b border-border last:border-b-0 transition-colors hover:bg-surface-hover group/row"
                 >
                   <td className="px-5 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -59,17 +60,27 @@ export function PaymentBreakdown() {
                     {item.amount}
                   </td>
                   <td className="px-5 py-3.5">
-                    <div className="flex items-center gap-2">
-                      {item.cardLogo && (
-                        <Image
-                          src={item.cardLogo}
-                          alt=""
-                          width={20}
-                          height={14}
-                          className="rounded-sm"
-                        />
-                      )}
-                      <span className="text-muted">{item.card}</span>
+                    <div className="relative">
+                      <div className="flex items-center gap-2">
+                        {item.cardLogo && (
+                          <Image
+                            src={item.cardLogo}
+                            alt=""
+                            width={20}
+                            height={14}
+                            className="rounded-sm"
+                          />
+                        )}
+                        <span className="text-muted">{item.card}</span>
+                        {item.whyThisCard && item.cardLogo && (
+                          <span className="relative group/tip">
+                            <Info className="h-3.5 w-3.5 text-dimmed cursor-help transition-colors group-hover/tip:text-accent" />
+                            <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 whitespace-normal w-56 rounded-lg border border-border-medium bg-surface-raised px-3 py-2 text-xs text-muted shadow-lg opacity-0 transition-opacity group-hover/tip:opacity-100">
+                              {item.whyThisCard}
+                            </span>
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </td>
                   <td className="px-5 py-3.5 text-muted">
@@ -89,6 +100,18 @@ export function PaymentBreakdown() {
             })}
           </tbody>
         </table>
+      </div>
+
+      {/* Card optimization callout */}
+      <div className="rounded-xl border border-accent/20 bg-accent/5 px-5 py-4">
+        <div className="flex items-start gap-3">
+          <Info className="h-4 w-4 shrink-0 text-accent mt-0.5" />
+          <p className="text-sm text-muted">
+            <span className="font-semibold text-foreground">Smart card routing: </span>
+            We matched each expense to your highest-earning card.
+            Hover the <Info className="inline h-3 w-3 text-dimmed" /> icons above to see why each card was selected.
+          </p>
+        </div>
       </div>
 
       {/* Summary */}

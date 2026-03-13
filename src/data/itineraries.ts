@@ -25,6 +25,12 @@ export interface HotelOption {
   nights: number;
 }
 
+export interface TradeOff {
+  label: string;
+  value: string;
+  positive: boolean;
+}
+
 export interface ItineraryOption {
   id: string;
   name: string;
@@ -39,6 +45,7 @@ export interface ItineraryOption {
   bestCard: string;
   bestCardLogo: string;
   whyThis: string;
+  tradeOffs: TradeOff[];
 }
 
 export const itineraryOptions: ItineraryOption[] = [
@@ -80,6 +87,12 @@ export const itineraryOptions: ItineraryOption[] = [
     bestCardLogo: "/logos/chase.svg",
     whyThis:
       "The most budget-friendly option at $1,960 total. You'll earn 5,880 Ultimate Rewards points (worth ~$88) by paying with your Chase Sapphire Reserve at 3x on travel. The one-stop flight adds ~3 hours but saves $1,000 per person vs. nonstop.",
+    tradeOffs: [
+      { label: "Cost", value: "Lowest out-of-pocket at $1,960", positive: true },
+      { label: "Points earned", value: "5,880 UR via Chase 3x travel", positive: true },
+      { label: "Travel time", value: "+2h layover in Seattle", positive: false },
+      { label: "Hotel", value: "3-star, functional but basic", positive: false },
+    ],
   },
   {
     id: "comfort",
@@ -119,6 +132,12 @@ export const itineraryOptions: ItineraryOption[] = [
     bestCardLogo: "/logos/chase.svg",
     whyThis:
       "Premium experience with ANA's acclaimed service and the iconic Park Hyatt (Lost in Translation vibes). Nonstop flight saves 2 hours. You'll earn 11,880 points via Chase Sapphire Reserve. Near your full $4K budget but maximizes comfort.",
+    tradeOffs: [
+      { label: "Experience", value: "ANA Premium Economy + 5-star Park Hyatt", positive: true },
+      { label: "Points earned", value: "11,880 UR via Chase 3x — highest earn", positive: true },
+      { label: "Cost", value: "Near budget cap at $3,960", positive: false },
+      { label: "Points used", value: "None — all cash", positive: false },
+    ],
   },
   {
     id: "points-max",
@@ -158,5 +177,11 @@ export const itineraryOptions: ItineraryOption[] = [
     bestCardLogo: "/logos/capitalone.svg",
     whyThis:
       "Maximize your existing points for $3,400+ in value. United miles redeem at 1.4 cpp (above average) and Marriott points at 0.92 cpp (good for a 4-star). You only pay $572 cash for taxes and fees. Use Capital One Venture X for the remaining cash to earn 2x on everything.",
+    tradeOffs: [
+      { label: "Cash cost", value: "Only $572 out-of-pocket", positive: true },
+      { label: "Points value", value: "United at 1.4 cpp + Marriott at 0.92 cpp", positive: true },
+      { label: "Flight", value: "Nonstop on United, economy class", positive: true },
+      { label: "Points balance", value: "Uses 70K miles + 125K Bonvoy", positive: false },
+    ],
   },
 ];

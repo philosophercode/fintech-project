@@ -92,6 +92,7 @@ export interface PaymentLineItem {
   cardLogo: string;
   pointsEarned: string;
   savings: string | null;
+  whyThisCard: string;
 }
 
 export const paymentBreakdown: PaymentLineItem[] = [
@@ -104,6 +105,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     cardLogo: "/logos/capitalone.svg",
     pointsEarned: "344 miles (2x)",
     savings: "$2,188 saved",
+    whyThisCard: "Venture X earns 2x on all purchases — best for taxes/fees when miles cover the fare",
   },
   {
     category: "Hotel",
@@ -114,6 +116,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     cardLogo: "",
     pointsEarned: "—",
     savings: "$1,600 saved",
+    whyThisCard: "Direct points redemption at 0.92 cpp — no card needed, saves $1,600 vs. cash rate",
   },
   {
     category: "Activities",
@@ -124,6 +127,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     cardLogo: "/logos/amex.svg",
     pointsEarned: "720 MR (4x)",
     savings: null,
+    whyThisCard: "Activities include dining — Amex Gold earns 4x MR at restaurants, beating Chase's 3x",
   },
   {
     category: "Ground Transport",
@@ -134,6 +138,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     cardLogo: "/logos/chase.svg",
     pointsEarned: "285 UR (3x)",
     savings: null,
+    whyThisCard: "Sapphire Reserve earns 3x on travel including transit — your best rate for transport",
   },
 ];
 

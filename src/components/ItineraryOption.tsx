@@ -11,6 +11,8 @@ import {
   Hotel,
   ArrowRight,
   Sparkles,
+  Check,
+  X,
 } from "lucide-react";
 import type { ItineraryOption as ItineraryOptionType } from "@/data/itineraries";
 
@@ -229,9 +231,28 @@ export function ItineraryOption({ option, index }: ItineraryOptionProps) {
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="overflow-hidden"
           >
-            <p className="mb-4 rounded-lg bg-[var(--surface-hover)] px-4 py-3 text-xs leading-relaxed text-[var(--text-secondary)]">
-              {option.whyThis}
-            </p>
+            <div className="mb-4 rounded-lg bg-[var(--surface-hover)] px-4 py-3 space-y-2.5">
+              <p className="text-xs leading-relaxed text-[var(--text-secondary)]">
+                {option.whyThis}
+              </p>
+              {option.tradeOffs && option.tradeOffs.length > 0 && (
+                <div className="space-y-1.5 border-t border-[var(--border-subtle)] pt-2.5">
+                  {option.tradeOffs.map((t, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      {t.positive ? (
+                        <Check className="h-3.5 w-3.5 shrink-0 text-[var(--green)] mt-0.5" />
+                      ) : (
+                        <X className="h-3.5 w-3.5 shrink-0 text-[var(--text-muted)] mt-0.5" />
+                      )}
+                      <p className="text-[11px] text-[var(--text-secondary)]">
+                        <span className="font-semibold text-[var(--text-primary)]">{t.label}: </span>
+                        {t.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
