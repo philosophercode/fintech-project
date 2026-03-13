@@ -163,9 +163,6 @@ export default function PlanPage() {
                   placeholder="Where do you want to go?"
                   className="flex-1 bg-transparent text-foreground placeholder:text-dimmed focus:outline-none"
                 />
-                <span className="text-xl leading-none" aria-hidden>
-                  &#x1F1EF;&#x1F1F5;
-                </span>
               </div>
             </Field>
 
@@ -174,7 +171,7 @@ export default function PlanPage() {
               <label className="mb-1.5 block text-sm font-medium text-muted">
                 Dates
               </label>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <div className="flex flex-1 items-center gap-3 rounded-xl border border-border-medium bg-surface px-4 py-3.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/50 transition-colors">
                   <Calendar className="h-5 w-5 shrink-0 text-accent" />
                   <input
@@ -184,7 +181,7 @@ export default function PlanPage() {
                     className="flex-1 bg-transparent text-foreground focus:outline-none [color-scheme:dark]"
                   />
                 </div>
-                <span className="shrink-0 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                <span className="shrink-0 self-center rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
                   {nights} night{nights !== 1 ? "s" : ""}
                 </span>
                 <div className="flex flex-1 items-center gap-3 rounded-xl border border-border-medium bg-surface px-4 py-3.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/50 transition-colors">

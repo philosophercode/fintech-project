@@ -17,57 +17,55 @@ export function LoyaltyCard({ program }: LoyaltyCardProps) {
         boxShadow: `0 0 24px ${program.color}20, 0 0 48px ${program.color}10`,
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="flex items-center gap-6 rounded-2xl bg-[var(--bg-surface)] p-6 cursor-default"
+      className="rounded-2xl bg-[var(--bg-surface)] p-5 sm:p-6 cursor-default"
       style={{ borderLeft: `3px solid ${program.color}` }}
     >
-      {/* Logo */}
-      <img
-        src={program.logo}
-        alt={program.name}
-        className="h-6 shrink-0 opacity-90"
-      />
-
-      {/* Name + provider */}
-      <div className="min-w-0 flex-1">
-        <h3
-          className="text-base font-semibold text-[var(--text-primary)]"
-          style={{ fontFamily: "var(--font-display)" }}
+      {/* Top row: logo + name + badge */}
+      <div className="flex items-center gap-3 sm:gap-4">
+        <img
+          src={program.logo}
+          alt={program.name}
+          className="h-5 sm:h-6 shrink-0 opacity-90"
+        />
+        <div className="min-w-0 flex-1">
+          <h3
+            className="text-sm sm:text-base font-semibold text-[var(--text-primary)] truncate"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            {program.name}
+          </h3>
+          <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
+            {program.provider}
+          </p>
+        </div>
+        <span
+          className="shrink-0 rounded-md px-2 py-0.5 sm:px-2.5 sm:py-1 text-xs font-medium"
+          style={{
+            border: `1px solid ${program.color}`,
+            color: "#f0f0f5",
+          }}
         >
-          {program.name}
-        </h3>
-        <p className="text-sm text-[var(--text-secondary)]">
-          {program.provider}
-        </p>
+          {program.centsPerPoint}&cent;/pt
+        </span>
       </div>
 
-      {/* Balance */}
-      <div className="text-right">
+      {/* Bottom row: balance + value */}
+      <div className="mt-3 flex items-baseline justify-between">
         <p className="text-[var(--text-primary)]">
           <span
-            className="text-2xl font-bold tabular-nums"
+            className="text-xl sm:text-2xl font-bold tabular-nums"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {formattedBalance}
           </span>{" "}
-          <span className="text-sm text-[var(--text-secondary)]">
+          <span className="text-xs sm:text-sm text-[var(--text-secondary)]">
             {program.unit}
           </span>
         </p>
-        <p className="mt-0.5 text-sm text-[var(--text-muted)]">
+        <p className="text-xs sm:text-sm text-[var(--text-muted)]">
           &asymp; ${formattedValue} value
         </p>
       </div>
-
-      {/* Cents per point badge */}
-      <span
-        className="shrink-0 rounded-md px-2.5 py-1 text-xs font-medium"
-        style={{
-          border: `1px solid ${program.color}`,
-          color: "#f0f0f5",
-        }}
-      >
-        {program.centsPerPoint}&cent;/pt
-      </span>
     </motion.div>
   );
 }

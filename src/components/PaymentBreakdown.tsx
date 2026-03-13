@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Plane,
   Train,
@@ -63,12 +62,10 @@ export function PaymentBreakdown() {
                     <div className="relative">
                       <div className="flex items-center gap-2">
                         {item.cardLogo && (
-                          <Image
+                          <img
                             src={item.cardLogo}
                             alt=""
-                            width={20}
-                            height={14}
-                            className="rounded-sm"
+                            className="h-3.5 w-5 rounded-sm object-contain"
                           />
                         )}
                         <span className="text-muted">{item.card}</span>

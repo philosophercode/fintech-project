@@ -48,16 +48,16 @@ const bookingItems: BookingItem[] = [
   {
     id: "flights",
     label: "Flights — United UA 79/78",
-    detail: "JFK → NRT nonstop, 2 passengers · 140,000 United miles + $172 taxes",
-    amount: "140K miles + $172",
+    detail: "JFK → NRT nonstop · 2 pax · 140K United miles",
+    amount: "140K + $172",
     icon: Plane,
     autoBooked: false,
   },
   {
     id: "hotel",
     label: "Hotel — Tokyo Marriott",
-    detail: "Deluxe Room, 5 nights · 200,000 Bonvoy points",
-    amount: "200K points",
+    detail: "Deluxe Room · 5 nights · 200K Bonvoy pts",
+    amount: "200K pts",
     icon: Hotel,
     autoBooked: false,
   },
@@ -243,11 +243,11 @@ export default function BookPage() {
                               <Icon className={`h-5 w-5 transition-colors duration-500 ${isConfirmed ? "text-[var(--green)]" : "text-muted"}`} />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <p className="text-sm font-medium text-foreground">{item.label}</p>
-                              <p className="text-xs text-muted">{item.detail}</p>
+                              <p className="text-sm font-medium text-foreground truncate">{item.label}</p>
+                              <p className="text-xs text-muted truncate">{item.detail}</p>
                             </div>
                             <div className="text-right shrink-0">
-                              <p className="text-sm font-semibold text-foreground">{item.amount}</p>
+                              <p className="text-sm font-semibold text-foreground whitespace-nowrap">{item.amount}</p>
                             </div>
                             <div className="shrink-0">
                               <AnimatePresence mode="wait">
@@ -266,7 +266,7 @@ export default function BookPage() {
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
                                     onClick={() => handleConfirm(item.id)}
-                                    className="rounded-lg border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent/20 cursor-pointer"
+                                    className="rounded-lg border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent/20 cursor-pointer whitespace-nowrap"
                                   >
                                     Confirm
                                   </motion.button>
