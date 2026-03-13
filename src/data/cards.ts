@@ -1,3 +1,5 @@
+import { asset } from "@/lib/basePath";
+
 export interface CreditCard {
   id: string;
   name: string;
@@ -19,7 +21,7 @@ export const cards: CreditCard[] = [
     lastFour: "4892",
     color: "linear-gradient(135deg, #1a1a3e 0%, #0d1b3e 50%, #1a2744 100%)",
     textColor: "#ffffff",
-    logo: "/logos/chase.svg",
+    logo: asset("/logos/chase.svg"),
     perks: [
       "3x on travel & dining",
       "$300 travel credit",
@@ -39,7 +41,7 @@ export const cards: CreditCard[] = [
     lastFour: "3718",
     color: "linear-gradient(135deg, #c9a84c 0%, #b8943d 50%, #a67c2e 100%)",
     textColor: "#1a1a1a",
-    logo: "/logos/amex.svg",
+    logo: asset("/logos/amex.svg"),
     perks: [
       "4x at restaurants & groceries",
       "3x on flights",
@@ -60,7 +62,7 @@ export const cards: CreditCard[] = [
     lastFour: "5210",
     color: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
     textColor: "#ffffff",
-    logo: "/logos/capitalone.svg",
+    logo: asset("/logos/capitalone.svg"),
     perks: [
       "2x on everything",
       "10x on hotels via Capital One Travel",

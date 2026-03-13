@@ -1,3 +1,5 @@
+import { asset } from "@/lib/basePath";
+
 export interface FlightOption {
   airline: string;
   airlineLogo: string;
@@ -57,7 +59,7 @@ export const itineraryOptions: ItineraryOption[] = [
     recommended: false,
     flight: {
       airline: "Delta",
-      airlineLogo: "/logos/delta.svg",
+      airlineLogo: asset("/logos/delta.svg"),
       route: "JFK → NRT",
       class: "Economy",
       stops: "1 stop (SEA)",
@@ -72,7 +74,7 @@ export const itineraryOptions: ItineraryOption[] = [
     hotel: {
       name: "Shibuya Stream Excel Hotel",
       brand: "Shibuya Stream",
-      brandLogo: "/logos/hotel-generic.svg",
+      brandLogo: asset("/logos/hotel-generic.svg"),
       stars: 3,
       location: "Shibuya, Tokyo",
       pricePerNight: 160,
@@ -84,7 +86,7 @@ export const itineraryOptions: ItineraryOption[] = [
     pointsUsed: null,
     pointsValue: null,
     bestCard: "Chase Sapphire Reserve",
-    bestCardLogo: "/logos/chase.svg",
+    bestCardLogo: asset("/logos/chase.svg"),
     whyThis:
       "The most budget-friendly option at $2,160 total. You'll earn 6,480 Ultimate Rewards points (worth ~$97) by paying with your Chase Sapphire Reserve at 3x on travel. The one-stop flight adds ~2 hours but saves $500 per person vs. nonstop.",
     tradeOffs: [
@@ -102,7 +104,7 @@ export const itineraryOptions: ItineraryOption[] = [
     recommended: false,
     flight: {
       airline: "ANA",
-      airlineLogo: "/logos/ana.svg",
+      airlineLogo: asset("/logos/ana.svg"),
       route: "JFK → NRT",
       class: "Premium Economy",
       stops: "Nonstop",
@@ -117,7 +119,7 @@ export const itineraryOptions: ItineraryOption[] = [
     hotel: {
       name: "Park Hyatt Tokyo",
       brand: "Hyatt",
-      brandLogo: "/logos/hyatt.svg",
+      brandLogo: asset("/logos/hyatt.svg"),
       stars: 5,
       location: "Shinjuku, Tokyo",
       pricePerNight: 520,
@@ -129,7 +131,7 @@ export const itineraryOptions: ItineraryOption[] = [
     pointsUsed: null,
     pointsValue: null,
     bestCard: "Chase Sapphire Reserve",
-    bestCardLogo: "/logos/chase.svg",
+    bestCardLogo: asset("/logos/chase.svg"),
     whyThis:
       "Premium experience with ANA's acclaimed service and the iconic Park Hyatt (Lost in Translation vibes). Nonstop flight saves 2 hours. You'll earn 14,880 points via Chase Sapphire Reserve. Exceeds your $4K budget but maximizes comfort.",
     tradeOffs: [
@@ -147,7 +149,7 @@ export const itineraryOptions: ItineraryOption[] = [
     recommended: true,
     flight: {
       airline: "United",
-      airlineLogo: "/logos/united.svg",
+      airlineLogo: asset("/logos/united.svg"),
       route: "JFK → NRT",
       class: "Economy",
       stops: "Nonstop",
@@ -162,7 +164,7 @@ export const itineraryOptions: ItineraryOption[] = [
     hotel: {
       name: "Tokyo Marriott Hotel",
       brand: "Marriott",
-      brandLogo: "/logos/marriott.svg",
+      brandLogo: asset("/logos/marriott.svg"),
       stars: 4,
       location: "Shinagawa, Tokyo",
       pricePerNight: null,
@@ -174,7 +176,7 @@ export const itineraryOptions: ItineraryOption[] = [
     pointsUsed: "140K United miles + 200K Marriott points",
     pointsValue: "~$3,560",
     bestCard: "Capital One Venture X",
-    bestCardLogo: "/logos/capitalone.svg",
+    bestCardLogo: asset("/logos/capitalone.svg"),
     whyThis:
       "Maximize your existing points for $3,500+ in value. United miles redeem at 1.3 cpp (above average) and Marriott points at 0.7 cpp (solid for a 4-star in Tokyo). You only pay $447 cash for taxes, activities, and transport. Uses 127K of your United miles + 13K transferred from Chase UR, plus 200K of your 210K Bonvoy points.",
     tradeOffs: [

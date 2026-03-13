@@ -1,3 +1,5 @@
+import { asset } from "@/lib/basePath";
+
 export interface TripActivity {
   time: string;
   title: string;
@@ -102,7 +104,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     amount: "$172 (taxes & fees)",
     method: "140,000 United miles + cash",
     card: "Capital One Venture X",
-    cardLogo: "/logos/capitalone.svg",
+    cardLogo: asset("/logos/capitalone.svg"),
     pointsEarned: "344 miles (2x)",
     savings: "$2,188 saved",
     whyThisCard: "Venture X earns 2x on all purchases — best for taxes/fees when miles cover the fare",
@@ -124,7 +126,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     amount: "$180",
     method: "Credit card",
     card: "Amex Gold",
-    cardLogo: "/logos/amex.svg",
+    cardLogo: asset("/logos/amex.svg"),
     pointsEarned: "720 MR (4x)",
     savings: null,
     whyThisCard: "Activities include dining — Amex Gold earns 4x MR at restaurants, beating Chase's 3x",
@@ -135,7 +137,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     amount: "$95",
     method: "Credit card",
     card: "Chase Sapphire Reserve",
-    cardLogo: "/logos/chase.svg",
+    cardLogo: asset("/logos/chase.svg"),
     pointsEarned: "285 UR (3x)",
     savings: null,
     whyThisCard: "Sapphire Reserve earns 3x on travel including transit — your best rate for transport",

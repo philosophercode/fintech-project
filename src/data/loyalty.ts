@@ -1,3 +1,5 @@
+import { asset } from "@/lib/basePath";
+
 export interface LoyaltyProgram {
   id: string;
   name: string;
@@ -15,7 +17,7 @@ export const loyaltyPrograms: LoyaltyProgram[] = [
     id: "delta-skymiles",
     name: "SkyMiles",
     provider: "Delta Air Lines",
-    logo: "/logos/delta.svg",
+    logo: asset("/logos/delta.svg"),
     balance: 85000,
     unit: "miles",
     estimatedValue: 1020,
@@ -26,7 +28,7 @@ export const loyaltyPrograms: LoyaltyProgram[] = [
     id: "marriott-bonvoy",
     name: "Bonvoy",
     provider: "Marriott",
-    logo: "/logos/marriott.svg",
+    logo: asset("/logos/marriott.svg"),
     balance: 210000,
     unit: "points",
     estimatedValue: 1470,
@@ -37,7 +39,7 @@ export const loyaltyPrograms: LoyaltyProgram[] = [
     id: "united-mileageplus",
     name: "MileagePlus",
     provider: "United Airlines",
-    logo: "/logos/united.svg",
+    logo: asset("/logos/united.svg"),
     balance: 127000,
     unit: "miles",
     estimatedValue: 1651,
