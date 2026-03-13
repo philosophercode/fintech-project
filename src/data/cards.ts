@@ -62,7 +62,7 @@ export const cards: CreditCard[] = [
     lastFour: "5210",
     color: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
     textColor: "#ffffff",
-    logo: asset("/logos/capitalone.svg"),
+    logo: asset("/logos/capitalone.png"),
     perks: [
       "2x on everything",
       "10x on hotels via Capital One Travel",

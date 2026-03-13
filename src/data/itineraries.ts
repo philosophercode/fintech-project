@@ -176,7 +176,7 @@ export const itineraryOptions: ItineraryOption[] = [
     pointsUsed: "140K United miles + 200K Marriott points",
     pointsValue: "~$3,560",
     bestCard: "Capital One Venture X",
-    bestCardLogo: asset("/logos/capitalone.svg"),
+    bestCardLogo: asset("/logos/capitalone.png"),
     whyThis:
       "Maximize your existing points for $3,500+ in value. United miles redeem at 1.3 cpp (above average) and Marriott points at 0.7 cpp (solid for a 4-star in Tokyo). You only pay $447 cash for taxes, activities, and transport. Uses 127K of your United miles + 13K transferred from Chase UR, plus 200K of your 210K Bonvoy points.",
     tradeOffs: [

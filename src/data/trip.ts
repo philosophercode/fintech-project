@@ -104,7 +104,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     amount: "$172 (taxes & fees)",
     method: "140,000 United miles + cash",
     card: "Capital One Venture X",
-    cardLogo: asset("/logos/capitalone.svg"),
+    cardLogo: asset("/logos/capitalone.png"),
     pointsEarned: "344 miles (2x)",
     savings: "$2,188 saved",
     whyThisCard: "Venture X earns 2x on all purchases — best for taxes/fees when miles cover the fare",
