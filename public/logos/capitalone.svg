@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="white">
-  <path d="M170.5 2c-4.5 0-8.7 1.2-12.3 3.3C162.7 2 168 0 173.8 0c11 0 19.9 8.9 19.9 19.9s-8.9 19.9-19.9 19.9c-5.8 0-11-2-15.2-5.3 3.6 2.1 7.8 3.3 12.3 3.3 13.2 0 19.5-8.5 19.5-17.9S183.7 2 170.5 2z" fill="#D03027"/>
-  <text x="0" y="28" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="white" letter-spacing="0.5">CAPITAL ONE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" fill="none">
+  <!-- Swoosh arc -->
+  <path d="M195 4c-5.5 0-10.5 2-14.5 5.2C184.2 4.2 190 1.5 196.5 1.5c12.5 0 22.5 9.5 22.5 21s-10 21-22.5 21c-6.5 0-12.3-2.7-16-7.7 4 3.2 9 5.2 14.5 5.2 11.5 0 18.5-8.5 18.5-18.5S206.5 4 195 4z" fill="#D12B2B"/>
+  <!-- Text -->
+  <text x="2" y="18" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="900" fill="white" letter-spacing="2.5">CAPITAL</text>
+  <text x="2" y="34" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="900" fill="white" letter-spacing="2.5">ONE</text>
 </svg>
