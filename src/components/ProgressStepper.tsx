@@ -2,7 +2,7 @@
 
 import { Check } from "lucide-react";
 
-const steps = ["Cards", "Loyalty", "Plan Trip", "Options", "Book"];
+const steps = ["Cards", "Loyalty", "Plan Trip", "Options", "Review", "Book"];
 
 interface ProgressStepperProps {
   currentStep: number; // 1-indexed

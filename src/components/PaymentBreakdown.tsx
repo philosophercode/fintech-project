@@ -75,7 +75,7 @@ export function PaymentBreakdown() {
                         {item.whyThisCard && item.cardLogo && (
                           <span className="relative group/tip">
                             <Info className="h-3.5 w-3.5 text-dimmed cursor-help transition-colors group-hover/tip:text-accent" />
-                            <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 whitespace-normal w-56 rounded-lg border border-border-medium bg-surface-raised px-3 py-2 text-xs text-muted shadow-lg opacity-0 transition-opacity group-hover/tip:opacity-100">
+                            <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 whitespace-normal w-56 rounded-lg border border-border-medium px-3 py-2 text-xs text-muted shadow-lg opacity-0 transition-opacity group-hover/tip:opacity-100" style={{ backgroundColor: "#1a1a24" }}>
                               {item.whyThisCard}
                             </span>
                           </span>

@@ -22,7 +22,7 @@ export const tripDays: TripDay[] = [
     activities: [
       { time: "11:00 AM", title: "Depart JFK → NRT", description: "United UA 79 · Economy · Nonstop · 13h 15m", icon: "plane", cost: null, bookable: false },
       { time: "2:15 PM+1", title: "Arrive Tokyo Narita", description: "Narita Express to Shinagawa (¥3,250 / ~$22)", icon: "train", cost: 22, bookable: false },
-      { time: "5:00 PM", title: "Check in: Tokyo Marriott Hotel", description: "Deluxe Room · Shinagawa · 25,000 Bonvoy pts/night", icon: "hotel", cost: null, bookable: false },
+      { time: "5:00 PM", title: "Check in: Tokyo Marriott Hotel", description: "Deluxe Room · Shinagawa · 40,000 Bonvoy pts/night", icon: "hotel", cost: null, bookable: false },
       { time: "7:30 PM", title: "Dinner: Afuri Ramen", description: "Famous yuzu shio ramen in Ebisu · 10 min by train", icon: "utensils", cost: 30, bookable: false },
     ],
   },
@@ -100,7 +100,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
     category: "Flights",
     icon: "plane",
     amount: "$172 (taxes & fees)",
-    method: "70,000 United miles + cash",
+    method: "140,000 United miles + cash",
     card: "Capital One Venture X",
     cardLogo: "/logos/capitalone.svg",
     pointsEarned: "344 miles (2x)",
@@ -110,13 +110,13 @@ export const paymentBreakdown: PaymentLineItem[] = [
   {
     category: "Hotel",
     icon: "hotel",
-    amount: "125,000 Marriott pts",
+    amount: "200,000 Marriott pts",
     method: "Points redemption",
     card: "—",
     cardLogo: "",
     pointsEarned: "—",
-    savings: "$1,600 saved",
-    whyThisCard: "Direct points redemption at 0.92 cpp — no card needed, saves $1,600 vs. cash rate",
+    savings: "$1,400 saved",
+    whyThisCard: "Direct points redemption at 0.7 cpp — saves $1,400 vs. $300/night cash rate",
   },
   {
     category: "Activities",
@@ -144,7 +144,7 @@ export const paymentBreakdown: PaymentLineItem[] = [
 
 export const paymentSummary = {
   totalCash: 447,
-  pointsUsed: "70K United miles + 125K Marriott points",
+  pointsUsed: "140K United miles + 200K Marriott points",
   pointsEarned: "1,349 new points",
-  totalSaved: 3553,
+  totalSaved: 3588,
 };
