@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import {
   MapPin,
+  PlaneTakeoff,
   Calendar,
   Users,
   DollarSign,
@@ -54,6 +55,7 @@ export default function PlanPage() {
   const [dreamTrip, setDreamTrip] = useState(
     "A 5-night trip to Tokyo for two — mix of culture, food, and shopping. Want to maximize our credit card points and stay somewhere walkable near Shibuya."
   );
+  const [departure, setDeparture] = useState("New York, NY (JFK)");
   const [destination, setDestination] = useState("Tokyo, Japan");
   const [departDate, setDepartDate] = useState("2026-04-12");
   const [returnDate, setReturnDate] = useState("2026-04-17");
@@ -131,10 +133,26 @@ export default function PlanPage() {
               />
             </Field>
 
-            {/* Destination */}
+            {/* From / To */}
             <Field index={1}>
               <label className="mb-1.5 block text-sm font-medium text-muted">
-                Destination
+                From
+              </label>
+              <div className="flex items-center gap-3 rounded-xl border border-border-medium bg-surface px-4 py-3.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/50 transition-colors">
+                <PlaneTakeoff className="h-5 w-5 shrink-0 text-accent" />
+                <input
+                  type="text"
+                  value={departure}
+                  onChange={(e) => setDeparture(e.target.value)}
+                  placeholder="Departure city or airport"
+                  className="flex-1 bg-transparent text-foreground placeholder:text-dimmed focus:outline-none"
+                />
+              </div>
+            </Field>
+
+            <Field index={2}>
+              <label className="mb-1.5 block text-sm font-medium text-muted">
+                To
               </label>
               <div className="flex items-center gap-3 rounded-xl border border-border-medium bg-surface px-4 py-3.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/50 transition-colors">
                 <MapPin className="h-5 w-5 shrink-0 text-accent" />
@@ -152,7 +170,7 @@ export default function PlanPage() {
             </Field>
 
             {/* Dates */}
-            <Field index={2}>
+            <Field index={3}>
               <label className="mb-1.5 block text-sm font-medium text-muted">
                 Dates
               </label>
@@ -182,7 +200,7 @@ export default function PlanPage() {
             </Field>
 
             {/* Travelers */}
-            <Field index={3}>
+            <Field index={4}>
               <label className="mb-1.5 block text-sm font-medium text-muted">
                 Travelers
               </label>
@@ -216,7 +234,7 @@ export default function PlanPage() {
             </Field>
 
             {/* Budget */}
-            <Field index={4}>
+            <Field index={5}>
               <label className="mb-1.5 block text-sm font-medium text-muted">
                 Budget
               </label>
@@ -252,7 +270,7 @@ export default function PlanPage() {
             </Field>
 
             {/* Preferences */}
-            <Field index={5}>
+            <Field index={6}>
               <label className="mb-1.5 block text-sm font-medium text-muted">
                 Preferences
               </label>

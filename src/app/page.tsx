@@ -241,7 +241,7 @@ export default function Home() {
           className="relative z-10 mt-6 max-w-xl text-lg text-muted sm:text-xl"
           style={{ fontFamily: "var(--font-body)" }}
         >
-          Smarter trips. Better rewards. One conversation.
+          Smarter trips. Better rewards. Frictionless booking.
         </motion.p>
 
         <motion.div

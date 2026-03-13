@@ -1,8 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { Check } from "lucide-react";
 
-const steps = ["Cards", "Loyalty", "Plan Trip", "Options", "Review", "Book"];
+const steps = [
+  { label: "Cards", href: "/cards" },
+  { label: "Loyalty", href: "/loyalty" },
+  { label: "Plan", href: "/plan" },
+  { label: "Options", href: "/options" },
+  { label: "Review", href: "/trip" },
+  { label: "Book", href: "/book" },
+];
 
 interface ProgressStepperProps {
   currentStep: number; // 1-indexed
@@ -11,21 +19,21 @@ interface ProgressStepperProps {
 export function ProgressStepper({ currentStep }: ProgressStepperProps) {
   return (
     <div className="mx-auto mb-10 flex w-full max-w-2xl items-center justify-between">
-      {steps.map((label, i) => {
+      {steps.map((step, i) => {
         const stepNum = i + 1;
         const isCompleted = stepNum < currentStep;
         const isCurrent = stepNum === currentStep;
 
         return (
-          <div key={label} className="flex items-center">
-            <div className="flex flex-col items-center gap-1.5">
+          <div key={step.label} className="flex items-center">
+            <Link href={step.href} className="flex flex-col items-center gap-1.5 group">
               <div
-                className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-all duration-300 group-hover:scale-110 ${
                   isCompleted
                     ? "bg-[var(--accent)] text-[#0A0A0F]"
                     : isCurrent
                       ? "bg-[var(--accent)] text-[#0A0A0F] glow-accent"
-                      : "border border-[var(--border-medium)] bg-transparent text-[var(--text-muted)]"
+                      : "border border-[var(--border-medium)] bg-transparent text-[var(--text-muted)] group-hover:border-[var(--accent)]/50 group-hover:text-[var(--accent)]"
                 }`}
               >
                 {isCompleted ? (
@@ -40,12 +48,12 @@ export function ProgressStepper({ currentStep }: ProgressStepperProps) {
                     ? "text-[var(--text-primary)] font-medium"
                     : isCompleted
                       ? "text-[var(--accent)]"
-                      : "text-[var(--text-muted)]"
+                      : "text-[var(--text-muted)] group-hover:text-[var(--text-secondary)]"
                 }`}
               >
-                {label}
+                {step.label}
               </span>
-            </div>
+            </Link>
 
             {i < steps.length - 1 && (
               <div
